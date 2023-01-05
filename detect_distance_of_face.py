@@ -37,37 +37,6 @@ print(focal_length_found)
 
 cap = cv2.VideoCapture(0)
 
-'''## for phone (we can access the camera of phone and can done the same operation)
-class Mobile:  
-    def getVideo(self, camera):
-        self.camera = camera
-        cap = cv2.VideoCapture(self.camera)
-
-        while (1):
-            _, frame = cap.read()
-            frame = cv2.resize(frame, (0, 0), fx=0.50, fy=0.50)
-
-            # calling face_data function
-            facce_width_in_frame = face_data(frame)
-
-            if facce_width_in_frame != 0:
-                # finding the distance by calling the function distance finder
-                distance = distance_finder(focal_length_found, known_width, facce_width_in_frame)
-
-                # drawing text on the screen
-                cv2.putText(frame, f"distance = {distance}", (50, 50), fonts, 0.6, (0, 0, 255), 2)
-
-            cv2.imshow("mobile camera", frame)
-            if cv2.waitKey(1) == ord("q"):
-                break
-
-        cap.release()
-        cv2.destroyAllWindows()
-
-cam = Mobile()
-cam.getVideo("http://10.9.224.119:8080/video")
-'''
-
 while (1):
     _, frame = cap.read()
 
